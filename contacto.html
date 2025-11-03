@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contacto | Panadería Dulce Aroma</title>
+  <style>
+    :root{
+      --bg: #fff8e1;
+      --text: #4e342e;
+      --muted: #6d4c41;
+      --primary: #f9a825;
+      --card: #ffffff;
+      --shadow: 0 8px 24px rgba(78,52,46,.15);
+      --radius: 16px;
+    }
+    body{
+      font-family: "Segoe UI", Roboto, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #fff3e0 0%, var(--bg) 100%);
+      margin: 0;
+      line-height: 1.5;
+    }
+    nav{
+      background: var(--primary);
+      box-shadow: 0 4px 18px rgba(249,168,37,.3);
+      position: sticky; top:0; z-index:10;
+    }
+    .nav-inner{
+      max-width: 960px; margin: 0 auto; padding: 12px 18px;
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+    }
+    .brand{ color:#4e342e; text-decoration:none; font-weight:700; font-size:1.2em; }
+    .links a{ color:#4e342e; text-decoration:none; margin-left:12px; padding:6px 10px; border-radius:10px; transition: background .3s; }
+    .links a:hover{ background: rgba(255,255,255,.4); }
+
+    main{ max-width:960px; margin:30px auto; padding:0 18px; }
+    h1{ color:#4e342e; }
+    p{ color:var(--muted); }
+    iframe{ width:100%; height:500px; border:none; border-radius:var(--radius); box-shadow:var(--shadow); }
+
+    .map{
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      margin-top:20px;
+    }
+
+    footer{ text-align:center; color:var(--muted); padding: 28px 18px 40px; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a class="brand" href="index.html">🥐 Panadería Dulce Aroma</a>
+      <div class="links">
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <h1>Contáctanos</h1>
+    <p>¿Quieres hacer un pedido o tienes alguna duda? Escríbenos a través del formulario o visítanos en nuestra panadería.</p>
+
+    <div class="map">
+      <img src="img/mapa.jpg" alt="Ubicación de la panadería" width="100%">
+    </div>
+
+    <h2 style="margin-top:30px;">Formulario de contacto</h2>
+    <p>Completa el siguiente formulario para ponerte en contacto con nosotros:</p>
+
+    <!-- Sustituye el enlace por tu propio Google Form -->
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfR5m-example/viewform?embedded=true" width="640" height="700">Cargando…</iframe>
+
+    <p style="margin-top:20px;">
+      También puedes seguirnos en nuestras redes:
+      <a href="https://www.instagram.com" target="_blank">Instagram</a> · 
+      <a href="https://www.tiktok.com" target="_blank">TikTok</a>
+    </p>
+  </main>
+
+  <footer>
+    © <span id="y"></span> Panadería Dulce Aroma — Hecho con HTML y CSS 🧡
+  </footer>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
